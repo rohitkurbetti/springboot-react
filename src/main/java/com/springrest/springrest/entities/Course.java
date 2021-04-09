@@ -1,5 +1,7 @@
 package com.springrest.springrest.entities;
 
+import java.sql.Date;
+
 import javax.persistence.Entity;
 import javax.persistence.Id;
 
@@ -15,8 +17,15 @@ public class Course {
 	private String description;
 	private long phone;
 	private long pincode;
+	private Date date;
 	
 	
+	public Date getDate() {
+		return date;
+	}
+	public void setDate(Date date) {
+		this.date = date;
+	}
 	public long getId() {
 		return id;
 	}

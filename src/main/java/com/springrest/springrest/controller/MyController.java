@@ -30,6 +30,12 @@ public class MyController {
 		return "Home page";
 	}
 	
+	@GetMapping("/getData")
+	public List<Course> getData() {
+		List<Course> list = this.courseService.getCourses();
+		return list;
+	}
+	
 	//get the courses
 	@GetMapping("/courses")
 	public List<Course> getCourses(){
@@ -61,9 +67,4 @@ public class MyController {
 			return new ResponseEntity<HttpStatus>(HttpStatus.INTERNAL_SERVER_ERROR);
 		}
 	}
-	
-	
-	
-	
-	
 }
