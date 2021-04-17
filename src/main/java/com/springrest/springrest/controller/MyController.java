@@ -1,7 +1,6 @@
 package com.springrest.springrest.controller;
 
 import java.util.List;
-
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
@@ -15,7 +14,9 @@ import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RestController;
 
 import com.springrest.springrest.entities.Course;
+import com.springrest.springrest.entities.Users;
 import com.springrest.springrest.services.CourseService;
+import com.springrest.springrest.services.UsersService;
 
 @RestController
 @CrossOrigin(origins = "*", allowedHeaders = "*")
@@ -23,6 +24,9 @@ public class MyController {
 	
 	@Autowired
 	private CourseService courseService;
+	
+	@Autowired
+	private UsersService usersService;
 	
 	
 	@GetMapping("/home")
@@ -53,9 +57,29 @@ public class MyController {
 		return this.courseService.addCourse(course);
 	}
 	
+	@PostMapping(path="/regi", consumes="application/json")
+	public Users addUser(@RequestBody Users user) {
+		return this.usersService.addUsers(user);
+	}
+	
+	@PostMapping(path="/login",consumes="application/json")
+	public Users getUser(@RequestBody Users user) {
+		return this.usersService.authUser(user);
+	}
+	
+	@GetMapping(path="/user/{token}")
+	public Users getUser(@PathVariable String token) {
+		return this.usersService.validateUser(token);
+	}
+	
 	@PutMapping("/courses/{courseId}")
 	public Course updateCourse(@RequestBody Course course) {
-		return this.courseService.updateCourse(course);
+		return this.courseService.updateCourse(course);	
+	}
+	
+	@GetMapping(path="/getUsers")
+	public List<Users> getUsers(){
+		return this.usersService.getUsers();
 	}
 	
 	@DeleteMapping("/courses/{courseId}")
