@@ -30,9 +30,9 @@ public class MyController {
 	
 	
 	@GetMapping("/home")
-	public String home() {
-		return "Home page";
-	}
+    public String welcome() {
+        return "home";
+    }
 	
 	@GetMapping("/getData")
 	public List<Course> getData() {
