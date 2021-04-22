@@ -29,13 +29,16 @@ public class MyController {
 	private UsersService usersService;
 	
 	
-	@GetMapping("/home")
-    public String welcome() {
-        return "home";
-    }
+	
 	
 	@GetMapping("/getData")
 	public List<Course> getData() {
+		List<Course> list = this.courseService.getCourses();
+		return list;
+	}
+	
+	@GetMapping("/house")
+	public List<Course> getll() {
 		List<Course> list = this.courseService.getCourses();
 		return list;
 	}
