@@ -1,29 +1,28 @@
 {
   "files": {
-    "main.css": "/static/css/main.5e51ef40.chunk.css",
-    "main.js": "/static/js/main.f9113b3c.chunk.js",
-    "main.js.map": "/static/js/main.f9113b3c.chunk.js.map",
-    "runtime-main.js": "/static/js/runtime-main.84272b3b.js",
-    "runtime-main.js.map": "/static/js/runtime-main.84272b3b.js.map",
+    "main.css": "/static/css/main.456ab607.chunk.css",
+    "main.js": "/static/js/main.e8b18cb7.chunk.js",
+    "main.js.map": "/static/js/main.e8b18cb7.chunk.js.map",
+    "runtime-main.js": "/static/js/runtime-main.04edc10b.js",
+    "runtime-main.js.map": "/static/js/runtime-main.04edc10b.js.map",
     "static/css/2.c62f1b2d.chunk.css": "/static/css/2.c62f1b2d.chunk.css",
-    "static/js/2.585e12cc.chunk.js": "/static/js/2.585e12cc.chunk.js",
-    "static/js/2.585e12cc.chunk.js.map": "/static/js/2.585e12cc.chunk.js.map",
-    "static/js/3.597165f9.chunk.js": "/static/js/3.597165f9.chunk.js",
-    "static/js/3.597165f9.chunk.js.map": "/static/js/3.597165f9.chunk.js.map",
+    "static/js/2.369268c7.chunk.js": "/static/js/2.369268c7.chunk.js",
+    "static/js/2.369268c7.chunk.js.map": "/static/js/2.369268c7.chunk.js.map",
+    "static/js/3.f79385ae.chunk.js": "/static/js/3.f79385ae.chunk.js",
+    "static/js/3.f79385ae.chunk.js.map": "/static/js/3.f79385ae.chunk.js.map",
     "index.html": "/index.html",
     "static/css/2.c62f1b2d.chunk.css.map": "/static/css/2.c62f1b2d.chunk.css.map",
-    "static/css/main.5e51ef40.chunk.css.map": "/static/css/main.5e51ef40.chunk.css.map",
-    "static/js/2.585e12cc.chunk.js.LICENSE.txt": "/static/js/2.585e12cc.chunk.js.LICENSE.txt",
-    "static/media/314799.9cd83b29.jpg": "/static/media/314799.9cd83b29.jpg",
+    "static/css/main.456ab607.chunk.css.map": "/static/css/main.456ab607.chunk.css.map",
+    "static/js/2.369268c7.chunk.js.LICENSE.txt": "/static/js/2.369268c7.chunk.js.LICENSE.txt",
+    "static/media/App.css": "/static/media/314799.9cd83b29.jpg",
     "static/media/altumcode-dMUt0X3f59Q-unsplash.6b7a85f5.jpg": "/static/media/altumcode-dMUt0X3f59Q-unsplash.6b7a85f5.jpg",
-    "static/media/App.css": "/static/media/austin-poon-JO_S6ewBqAk-unsplash.48643f50.jpg",
     "static/media/lucas-hein-3tgwzKpxHa4-unsplash.2db0918e.jpg": "/static/media/lucas-hein-3tgwzKpxHa4-unsplash.2db0918e.jpg"
   },
   "entrypoints": [
-    "static/js/runtime-main.84272b3b.js",
+    "static/js/runtime-main.04edc10b.js",
     "static/css/2.c62f1b2d.chunk.css",
-    "static/js/2.585e12cc.chunk.js",
-    "static/css/main.5e51ef40.chunk.css",
-    "static/js/main.f9113b3c.chunk.js"
+    "static/js/2.369268c7.chunk.js",
+    "static/css/main.456ab607.chunk.css",
+    "static/js/main.e8b18cb7.chunk.js"
   ]
 }

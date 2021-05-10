@@ -101,6 +101,7 @@ public class UsersServiceImpl implements UsersService{
 			if(currentUser.getEmail().equals(email)) {
 				if(currentUser.getPassword().equals(password)) {
 					userFound=true;
+					userPresent.setId(currentUser.getId());
 					userPresent.setEmail(currentUser.getEmail());
 					userPresent.setFirstname(currentUser.getFirstname());
 					userPresent.setLastname(currentUser.getLastname());
@@ -122,6 +123,14 @@ public class UsersServiceImpl implements UsersService{
 			}
 		}
 		return null;
+	}
+
+	@Override
+	public Users updateUser(Users user) {
+		Users user1 = usersDao.getOne(user.getId());
+		user1.setUserScrore(user.getUserScrore());
+		usersDao.save(user1);
+		return user1;
 	}
 	
 	

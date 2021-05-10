@@ -20,4 +20,6 @@ public interface UsersService {
 
 	public Users validateUser(String token);
 
+	public Users updateUser(Users user);
+
 }

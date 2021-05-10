@@ -20,6 +20,8 @@ public class Users {
 	private String email;
 	private String password;
 	private String token;
+	private Long userScrore;
+	
 	public String getToken() {
 		return token;
 	}
@@ -68,6 +70,12 @@ public class Users {
 	}
 	public void setPassword(String password) {
 		this.password = password;
+	}
+	public Long getUserScrore() {
+		return userScrore;
+	}
+	public void setUserScrore(Long userScrore) {
+		this.userScrore = userScrore;
 	}
 	
 	

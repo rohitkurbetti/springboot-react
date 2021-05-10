@@ -3,6 +3,7 @@ package com.springrest.springrest.entities;
 import java.sql.Date;
 
 import javax.persistence.Entity;
+import javax.persistence.GeneratedValue;
 import javax.persistence.Id;
 
 import com.fasterxml.jackson.annotation.JsonIgnoreProperties;
@@ -12,7 +13,9 @@ import com.fasterxml.jackson.annotation.JsonIgnoreProperties;
 public class Course {
 	
 	@Id
+	@GeneratedValue
 	private long id;
+	
 	private String title;
 	private String description;
 	private long phone;

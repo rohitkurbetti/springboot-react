@@ -1,6 +1,9 @@
 package com.springrest.springrest.controller;
 
+import java.util.HashMap;
 import java.util.List;
+import java.util.Map;
+
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
@@ -13,8 +16,10 @@ import org.springframework.web.bind.annotation.PutMapping;
 import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RestController;
 
+import com.springrest.springrest.entities.ContactUs;
 import com.springrest.springrest.entities.Course;
 import com.springrest.springrest.entities.Users;
+import com.springrest.springrest.services.ContactUsService;
 import com.springrest.springrest.services.CourseService;
 import com.springrest.springrest.services.UsersService;
 
@@ -28,8 +33,24 @@ public class MyController {
 	@Autowired
 	private UsersService usersService;
 	
+	@Autowired
+	private ContactUsService contactUsService;
 	
+	@GetMapping(path="/send")
+	public Map<Object, Object> getAllUsers() {
+		List<ContactUs> list1 = this.contactUsService.getAllUsers();
+//		List<String,ContactUs> string = new ArrayList<String,ContactUs>();
+		Map<Object, Object> map = new HashMap<>();
+		for(ContactUs data : list1) {
+			map.put(data.getId(),data);
+		}
+		return map;
+	}
 	
+	@PostMapping(path="/send", consumes="application/json")
+	public ContactUs addUser(@RequestBody ContactUs contactus) {
+		return this.contactUsService.addUser(contactus);
+	}
 	
 	@GetMapping("/getData")
 	public List<Course> getData() {
@@ -83,6 +104,12 @@ public class MyController {
 	@GetMapping(path="/getUsers")
 	public List<Users> getUsers(){
 		return this.usersService.getUsers();
+	}
+	
+	@PostMapping(path="/updateScore",consumes="application/json")
+	public Users updateUser(@RequestBody Users user) {
+		return this.usersService.updateUser(user);
+		
 	}
 	
 	@DeleteMapping("/courses/{courseId}")

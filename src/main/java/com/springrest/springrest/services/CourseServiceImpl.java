@@ -1,6 +1,9 @@
 package com.springrest.springrest.services;
 
+import java.util.HashMap;
 import java.util.List;
+import java.util.Map;
+
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
@@ -71,6 +74,16 @@ public class CourseServiceImpl implements CourseService{
 //		list = this.list.stream().filter(e -> e.getId() != courseId).collect(Collectors.toList());
 		Course course = courseDao.getOne(courseId);
 		courseDao.delete(course);
+	}
+
+	@Override
+	public List<Course> getCourses1(String searchStr) {
+		List<Course> courses = courseDao.findAll();
+		Map<String,Course> map = new HashMap<String,Course>();
+		for(Course course : courses) {
+			map.put(course.getTitle(),course);
+		}
+		return (List<Course>) map;
 	}
 	
 	
